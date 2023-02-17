@@ -1,0 +1,13 @@
+ul {
+  list-style-type: none;
+}
+
+.homeList {
+  display: flex;
+  justify-content: space-around;
+}
+
+.dropList {
+  margin-top: 10px;
+  padding: 0;
+}
