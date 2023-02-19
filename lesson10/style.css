@@ -1,0 +1,4 @@
+ table, thead, tbody, tfoot, tr, td, th, caption {
+  font-size: 2rem;
+  border: 1px solid #000;
+ }
