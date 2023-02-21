@@ -1,0 +1,21 @@
+body {
+  font-size: 20px;
+}
+
+/*  я в этом уроке так же подключил стиль шрифта, и ввел только свойство font-sryle,
+ так как я подключил 800 италик и 400 нормал */
+.title {
+  font-size: 2em;
+  font-family: 'Shantell Sans', cursive;
+  font-style: italic;
+}
+
+.title__child {
+  font-size: 2em;
+}
+
+.title__grandchild {
+  font-size: 3rem;
+  line-height: 200%;
+  font-style: normal;
+}
