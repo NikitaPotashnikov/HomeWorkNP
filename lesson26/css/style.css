@@ -1,0 +1,21 @@
+.wrapper {
+  padding: 100px 100px 50vh;
+  height: 100%;
+}
+
+.block {
+  height: 100%;
+  width: 100%;
+  border: 5px solid black;
+}
+
+.block:hover {
+  border-color: blue;
+}
+
+.block {
+  transition: 3s 2s;
+
+  /* transition-duration: 3s;
+  transition-delay: 2s; */
+}

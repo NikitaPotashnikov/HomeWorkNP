@@ -1,0 +1,35 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+}
+.translate {
+  padding: 100px 0;
+}
+
+.translate__blocks {
+  display: flex;
+  justify-content: center;
+}
+
+.red,
+.blue {
+  width: 300px;
+  height: 300px;
+}
+
+.red {
+  background-color: rgba(240, 82, 82, 0.699);
+}
+
+.blue {
+  background-color: rgba(102, 102, 228, 0.671);
+}
+
+.translate__red {
+  transform: skew(30deg) translatex(10%);
+}
