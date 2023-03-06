@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 30vh;
+}
+
+@keyframes grad-color {
+  100%{
+    color: red;
+  }
+}
+
+h1 {
+  text-align: center;
+  font-size: 10em;
+  animation: grad-color 2s infinite alternate;
+}

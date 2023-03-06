@@ -1,0 +1,20 @@
+.wrapper {
+  padding: 100px;
+  height: 100%;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 10px solid black;
+}
+
+
+.flexbox_content {
+  padding: 50px;
+  font-size: 3em;
+  flex-grow: 1;
+  text-align: center;
+  border: 5px solid red;
+}
