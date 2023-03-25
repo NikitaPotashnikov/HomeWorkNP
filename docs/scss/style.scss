@@ -1,0 +1,274 @@
+@import "font";
+@import "reset";
+@import "mixin";
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    line-height: 150%;
+
+    .logo {
+      margin-right: 24px;
+    }
+    span {
+      width: 1px;
+      height: 48px;
+      background: #d9d9d9;
+    }
+    .header__nav {
+      margin: 0 auto 0 24px;
+
+      .header__nav-list {
+        display: flex;
+
+        .header__content {
+          margin-right: 40px;
+          :last-child {
+            margin-right: 0;
+          }
+
+          .header__link:hover {
+            padding-bottom: 32px;
+            color: #3e8bf3;
+            border-bottom: 2px solid #3e8bf3;
+          }
+        }
+      }
+    }
+    .header__btn-box {
+      display: flex;
+      align-items: center;
+      // position: relative;
+      margin-left: 50px;
+
+      .header__drop-box {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 48px;
+        span {
+          background-color: transparent;
+        }
+        .dropdown-btn {
+          position: relative;
+          :hover {
+            color: #3e8bf3;
+          }
+          ::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: -28px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url("../images/flags/flag-russia.svg") 0 0 / 100%
+              no-repeat;
+          }
+          ::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: -24px;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: url("../images/icon/header-check.svg") 0 0 / 100%
+              no-repeat;
+          }
+        }
+
+        .dropdown-container {
+          display: block;
+          position: absolute;
+          top: 250%;
+          left: -70%;
+          width: 140px;
+          height: 111 px;
+          padding: 8px;
+          border-radius: 16px;
+          background: #fff;
+          z-index: 1;
+
+          .dropdown-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+
+            .dropdown-item {
+              width: 100%;
+              padding: 8px 16px;
+              transition: all 0.3s;
+              .dropdown__link {
+                svg {
+                  position: relative;
+                  top: 0;
+                  transform: translateY(23%);
+                }
+              }
+            }
+            .dropdown-item:hover {
+              background: #f5f9fe;
+              border-radius: 8px;
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+      .header__btn {
+        @extend %button;
+        padding: 12px 16px;
+      }
+    }
+  }
+  .header__body {
+    width: 100%;
+    // height: 100%;
+    background: #f5f9fe;
+    .header__body-inner {
+      display: flex;
+      flex-direction: column;
+      margin: 75px 24px 24px 24px;
+    }
+    .header__main {
+      margin: 0 84px 87px 84px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .header__main-content {
+        margin-right: 24px;
+        max-width: 600px;
+
+        .header__title {
+          font-size: 64px;
+          line-height: 112%;
+          margin-bottom: 32px;
+        }
+        .header__button {
+          @extend %button;
+        padding: 16px 24px;
+        }
+        .header__text {
+          margin: 32px 0 0 32px;
+          line-height: 150%;
+          color: #6f767e;
+          position: relative;
+          ::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -32px;
+            width: 24px;
+            height: 24px;
+            background: url("../images/ClipboardText.svg") 0 0 / 100% no-repeat;
+          }
+        }
+      }
+      .header__image {
+        max-width: 600px;
+      }
+    }
+    .header__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6f767e;
+      line-height: 133%;
+
+      .header__bottom-scroll {
+        display: flex;
+        align-items: center;
+
+        span {
+          position: relative;
+          display: block;
+          width: 24px;
+          height: 24px;
+          position: relative;
+          margin-right: 16px;
+          background-color: #fff;
+          border-radius: 50%;
+        }
+
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 16px;
+          height: 16px;
+        }
+      }
+      .header__social {
+        display: flex;
+        align-items: center;
+        .header__social-text {
+        }
+
+        .header__social-list {
+          display: flex;
+          margin-left: 24px;
+
+          .header__social-content {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin-right: 16px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04),
+              0px 8px 16px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+
+            .header__social-link {
+              svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+          .header__social-content:hover {
+            background-color: #3e8bf3;
+            transition: all 0.3s;
+          }
+          .header__social-content:hover path,
+          .header__social-content:active path {
+            fill: #fff;
+            transition: all 0.3s;
+          }
+          .header__social-content:active {
+            background-color: #295da2;
+            transition: all 0.3s;
+          }
+
+          .header__social-content:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
