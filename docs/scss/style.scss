@@ -1,0 +1,718 @@
+@import "font";
+@import "reset";
+@import "mixin";
+
+.wrapper {
+  min-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1255px;
+  padding: 0 15px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.main__about {
+  padding-top: 120px;
+}
+
+.main__steps {
+  padding-top: 120px;
+}
+
+.main__countries {
+  padding-top: 120px;
+}
+
+.main__faq {
+  padding-top: 120px;
+}
+
+.header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    line-height: 150%;
+
+    .logo {
+      margin-right: 24px;
+    }
+    span {
+      width: 1px;
+      height: 48px;
+      background: #d9d9d9;
+    }
+    .header__nav {
+      margin: 0 auto 0 24px;
+
+      .header__nav-list {
+        display: flex;
+
+        .header__content {
+          margin-right: 40px;
+          :last-child {
+            margin-right: 0;
+          }
+
+          .header__link:hover {
+            padding-bottom: 32px;
+            color: #3e8bf3;
+            border-bottom: 2px solid #3e8bf3;
+          }
+        }
+      }
+    }
+    .header__btn-box {
+      display: flex;
+      align-items: center;
+      // position: relative;
+      margin-left: 50px;
+
+      .header__drop-box {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 48px;
+        span {
+          background-color: transparent;
+        }
+        .dropdown-btn {
+          position: relative;
+          :hover {
+            color: #3e8bf3;
+          }
+          ::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: -28px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url("../images/flags/flag-russia.svg") 0 0 / 100%
+              no-repeat;
+          }
+          ::after {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            right: -24px;
+            transform: translateY(-50%);
+            width: 24px;
+            height: 24px;
+            background: url("../images/icon/header-check.svg") 0 0 / 100%
+              no-repeat;
+          }
+        }
+
+        .dropdown-container {
+          display: block;
+          position: absolute;
+          top: 250%;
+          left: -70%;
+          width: 140px;
+          height: 111 px;
+          padding: 8px;
+          border-radius: 16px;
+          background: #fff;
+          z-index: 1;
+
+          .dropdown-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+
+            .dropdown-item {
+              width: 100%;
+              padding: 8px 16px;
+              transition: all 0.3s;
+              .dropdown__link {
+                svg {
+                  position: relative;
+                  top: 0;
+                  transform: translateY(23%);
+                }
+              }
+            }
+            .dropdown-item:hover {
+              background: #f5f9fe;
+              border-radius: 8px;
+              transition: all 0.3s;
+            }
+          }
+        }
+      }
+      .header__btn {
+        @extend %button-blue;
+        line-height: 150%;
+        padding: 12px 16px;
+      }
+    }
+  }
+  .header__body {
+    width: 100%;
+    background: #f5f9fe;
+    margin-bottom: 15px;
+    .header__body-inner {
+      display: flex;
+      flex-direction: column;
+      margin: 75px 24px 24px 24px;
+    }
+    .header__main {
+      margin-bottom: 87px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .header__main-content {
+        margin-right: 24px;
+        // max-width: 600px;
+
+        .header__title {
+          font-size: 64px;
+          line-height: 112%;
+          margin-bottom: 32px;
+        }
+        .header__button {
+          @extend %button-blue;
+          font-size: 20px;
+          line-height: 160%;
+          padding: 16px 24px;
+        }
+        .header__text {
+          margin: 32px 0 0 32px;
+          line-height: 150%;
+          color: #6f767e;
+          position: relative;
+          ::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: -32px;
+            width: 24px;
+            height: 24px;
+            background: url("../images/ClipboardText.svg") 0 0 / 100% no-repeat;
+          }
+        }
+      }
+      .header__image {
+        max-width: 600px;
+      }
+    }
+    .header__row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6f767e;
+      line-height: 133%;
+
+      .header__bottom-scroll {
+        display: flex;
+        align-items: center;
+
+        span {
+          position: relative;
+          display: block;
+          width: 24px;
+          height: 24px;
+          position: relative;
+          margin-right: 16px;
+          background-color: #fff;
+          border-radius: 50%;
+        }
+
+        svg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 16px;
+          height: 16px;
+        }
+      }
+      .header__social {
+        display: flex;
+        align-items: center;
+        .header__social-text {
+        }
+
+        .header__social-list {
+          display: flex;
+          margin-left: 24px;
+
+          .header__social-content {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin-right: 16px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04),
+              0px 8px 16px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+
+            .header__social-link {
+              svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+          .header__social-content:hover {
+            background-color: #3e8bf3;
+            transition: all 0.3s;
+          }
+          .header__social-content:hover path,
+          .header__social-content:active path {
+            fill: #fff;
+            transition: all 0.3s;
+          }
+          .header__social-content:active {
+            background-color: #295da2;
+            transition: all 0.3s;
+          }
+
+          .header__social-content:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.about__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 178px;
+  padding-bottom: 120px;
+  border-bottom: 1px solid #d9d9d9;
+
+  .about__content {
+    .about__title {
+      font-size: 48px;
+      line-height: 117%;
+    }
+    .about__text {
+      font-size: 18px;
+      line-height: 178%;
+      color: #6f767e;
+    }
+  }
+  .about__content:last-child {
+    max-width: 500px;
+  }
+}
+
+.step__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  padding-bottom: 120px;
+  border-bottom: 1px solid #d9d9d9;
+  .step__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 600px;
+    .step__title {
+      max-width: 450px;
+      font-size: 48px;
+      line-height: 117%;
+    }
+    .step__btn {
+      @extend %button-blue;
+      font-size: 18px;
+      line-height: 178%;
+      padding: 12px 24px;
+    }
+  }
+  .step__body {
+    display: flex;
+    gap: 24px;
+    .step__body-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 24px;
+      img {
+        width: 100%;
+      }
+      .step__body-number {
+        padding: 4px 16px;
+        line-height: 150%;
+        background-color: #dfd3f7;
+        border-radius: 24px;
+      }
+      .step__body-title {
+        font-size: 24px;
+        line-height: 133%;
+      }
+      .step__body-text {
+        line-height: 150%;
+        color: #6f767e;
+      }
+    }
+    :nth-child(2) .step__body-number {
+      background-color: #c0e1ee;
+    }
+    :nth-child(3) .step__body-number {
+      background-color: #d0e5c2;
+    }
+  }
+}
+.countries__inner {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 120px;
+  border-bottom: 1px solid #d9d9d9;
+  .countries__column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 64px;
+    z-index: 1;
+    .countries__menu {
+      background: #f5f9fe;
+      border-radius: 16px;
+      .countries__list {
+        margin: 8px;
+        .countries__item {
+          display: block;
+          position: relative;
+          margin-bottom: 8px;
+
+          .countries__button {
+            background: none;
+            border-radius: 8px;
+            transition: all 0.3s;
+          }
+          :hover {
+            background: #fff;
+            transition: all 0.3s;
+          }
+
+          :last-child {
+            margin-bottom: 0;
+          }
+        }
+        .russia {
+          .countries__button {
+            padding: 8px 41px 8px 44px;
+            background: #fff;
+          }
+          ::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url("../images/flags/flag-russia.svg") 0 0 / 100%
+              no-repeat;
+          }
+        }
+        .ukraine {
+          .countries__button {
+            padding: 8px 32.8px 8px 44px;
+          }
+          ::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url("../images/flags/flag-ukraine.svg") 0 0 / 100%
+              no-repeat;
+          }
+        }
+        .turkey {
+          .countries__button {
+            padding: 8px 41px 8px 44px;
+          }
+          ::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url("../images/flags/flag-turkey.svg") 0 0 / 100%
+              no-repeat;
+          }
+        }
+        .kazakhstan {
+          .countries__button {
+            padding: 8px 20px 8px 44px;
+          }
+          ::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url("../images/flags/flag-kazakhstan.svg") 0 0 / 100%
+              no-repeat;
+          }
+        }
+        .belarus {
+          .countries__button {
+            padding: 8px 26px 8px 44px;
+          }
+          ::before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            background: url("../images/flags/flag-belarus.svg") 0 0 / 100%
+              no-repeat;
+          }
+        }
+      }
+    }
+    .countries__content {
+      max-width: 452px;
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      z-index: 1;
+      .countries__title {
+        font-size: 48px;
+        line-height: 117%;
+      }
+      .countries__btn-box {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        .countries__btn {
+          @extend %button-blue;
+          padding: 12px 24px;
+          font-size: 18px;
+          line-height: 178%;
+        }
+        :last-child {
+          @extend%button-grey;
+        }
+      }
+    }
+  }
+  .countries__map {
+    position: absolute;
+    top: 0;
+    left: 18%;
+  }
+}
+
+.faq__inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 120px;
+  .faq__heading {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    .faq__heading-title {
+      font-size: 48px;
+      line-height: 117%;
+    }
+    .faq__heading-text {
+      max-width: 200px;
+      line-height: 150%;
+      color: #6f767e;
+    }
+  }
+  .faq__acc {
+    max-width: 800px;
+    .faq__acc-item {
+      padding: 24px;
+      border-bottom: 1px solid #d9d9d9;
+      .faq__acc-link {
+        .faq__acc-head {
+          padding-right: 163px;
+          white-space: nowrap;
+          font-size: 24px;
+          line-height: 133%;
+          position: relative;
+
+          ::before,
+          ::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 18px;
+            height: 2px;
+            background-color: #6f767e;
+            border-radius: 2px;
+          }
+          ::after {
+            transform: rotate(90deg);
+            transition: all 0.3s;
+          }
+        }
+        .faq__acc-text {
+          margin-top: 24px;
+          line-height: 150%;
+          color: #6f767e;
+        }
+      }
+      .faq__acc-link--active {
+        .faq__acc-head {
+          ::after {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+    :hover {
+      background: #f5f9fe;
+    }
+    .faq__acc-item:first-child {
+      border-top: 1px solid #d9d9d9;
+    }
+  }
+}
+.footer {
+  .footer__body {
+    background: #f5f9fe;
+    .footer__body-inner {
+      display: flex;
+      position: relative;
+      .footer__body-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 32px;
+        margin: 96px 0;
+        max-width: 550px;
+        .footer__title {
+          font-size: 48px;
+          line-height: 117%;
+        }
+        .footer__text {
+          font-size: 18px;
+          line-height: 178%;
+          color: #6f767e;
+        }
+        .footer__btn {
+          @extend%button-blue;
+          padding: 12px 24px;
+          font-size: 18px;
+          line-height: 178%;
+        }
+      }
+      img {
+        position: absolute;
+        top: -14.6%;
+        left: 50%;
+      }
+    }
+  }
+
+  .footer__bottom {
+    padding: 64px 0;
+    font-size: 12px;
+    line-height: 133%;
+    color: #6F767E;
+    white-space: nowrap;
+    .footer__bottom-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .footer__copy {
+        
+      }
+      .footer__link {
+        .footer__use {
+          margin-right: 32px;
+        }
+        .footer__privacy {
+        }
+      }
+      .footer__social {
+        display: flex;
+        align-items: center;
+        .footer__social-text {
+        }
+
+        .footer__social-list {
+          display: flex;
+          margin-left: 24px;
+
+          .footer__social-content {
+            position: relative;
+            display: block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #fff;
+            margin-right: 16px;
+            box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.04),
+              0px 8px 16px rgba(0, 0, 0, 0.08);
+            cursor: pointer;
+
+            .footer__social-link {
+              svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+              }
+            }
+          }
+          .footer__social-content:hover {
+            background-color: #3e8bf3;
+            transition: all 0.3s;
+          }
+          .footer__social-content:hover path,
+          .footer__social-content:active path {
+            fill: #fff;
+            transition: all 0.3s;
+          }
+          .footer__social-content:active {
+            background-color: #295da2;
+            transition: all 0.3s;
+          }
+
+          .footer__social-content:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
