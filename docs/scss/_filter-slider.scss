@@ -1,0 +1,54 @@
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.header__selection-filter {
+  margin-bottom: 85px;
+}
+
+.noUi-target {
+  background: #808080;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  height: 2px;
+}
+
+.noUi-connect {
+  background: #808080;
+}
+
+.noUi-handle::before,
+.noUi-handle::after {
+  display: none;
+}
+
+.noUi-handle {
+  box-shadow: none;
+  border: none;
+  border-radius: 200px;
+  background: #f4683f;
+}
+
+.noUi-horizontal .noUi-handle {
+  width: 8px;
+  height: 23px;
+  top: -10px;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+  right: -1px;
+}
+.noUi-horizontal .noUi-handle-lower {
+  right: -7px;
+}
+
+.noUi-horizontal .noUi-tooltip {
+  bottom: -170%;
+}
+
