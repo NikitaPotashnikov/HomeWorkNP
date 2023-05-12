@@ -1,0 +1,118 @@
+.menu__fixed {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #e5e5e5;
+  width: 100%;
+  z-index: 4;
+}
+.menu__fixed--active {
+  display: block;
+}
+.menu__inner {
+  display: flex;
+  padding: 20px 60px;
+  gap: 62px;
+  align-items: center;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  .menu__logo {
+    align-self: center;
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.menu__nav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-list {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+    :nth-child(2) {
+      gap: 30px;
+    }
+  }
+  &-item {
+    display: flex;
+    .city {
+      margin-right: 43px;
+      align-self: center;
+      position: relative;
+      ::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 4px;
+        left: -22px;
+        width: 18px;
+        height: 18px;
+        background: url("../images/header/map-locator\ 1.svg");
+      }
+      ::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 5px;
+        right: -22px;
+        width: 20px;
+        height: 20px;
+        background: url("../images/header/menu_white/arrow_down_black.svg");
+      }
+    }
+    .catalog {
+      color: #fff;
+      padding: 9px 30px;
+      background: #f4683f;
+      border-radius: 200px;
+      margin-right: 20px;
+    }
+    .quick-picks {
+      padding: 9px 22px;
+      border-radius: 200px;
+      border: 1px solid black;
+    }
+  }
+  .menu__nav-connect {
+    display: flex;
+    .call {
+      display: none;
+    }
+    .heart {
+      margin-right: 34px;
+      svg {
+        position: relative;
+        top: 3px;
+      }
+    }
+    .menu__svg {
+      position: relative;
+      top: 5px;
+    }
+  }
+  &-link {
+    transform: scale(1);
+    transition: transform 0.3s;
+  }
+  &-link:hover {
+    transform: scale(1.1);
+  }
+}
+
+.city {
+}
+.catalog {
+}
+.quick-picks {
+}
+.search {
+}
