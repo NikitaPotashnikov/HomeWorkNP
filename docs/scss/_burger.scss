@@ -1,0 +1,66 @@
+.burger {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 32px;
+  right: 24px;
+  z-index: 6;
+  width: 29px;
+  height: 30px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.burger--active {
+  top: 28px;
+  right: 41px;
+}
+.burger span {
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  background-color: #fff;
+  border-radius: 3px;
+  margin: 6px 0;
+  transition: all .3s;
+}
+.burger--active span {
+  display: none;
+}
+.burger::before,
+.burger::after {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 2.5px;
+  background-color: #fff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  transform: rotate(0) translate(0px, 0px);
+}
+.burger--active::before {
+  transition: all 0.3s ease;
+  transform: rotate(-45deg) translate(-2px, 2px);
+}
+.burger--active::after {
+  transition: all 0.3s ease;
+  transform: rotate(45deg);
+}
+
+.burger--scroll::after,
+.burger--scroll::before,
+.burger--scroll span {
+  background-color: #000;
+}
+
+.burger--scrollwhite::before,
+.burger--scrollwhite::after {
+background-color: #fff;
+}
+
+.burger--scroll {
+  top: 25px;
+}
+
