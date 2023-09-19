@@ -1,0 +1,53 @@
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  font-family: Arial, sans-serif;
+}
+
+.wrapper_inner {
+  padding: 80px 245px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_content {
+  width: 456px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header_title {
+  font-size: 50px;
+  line-height: 70px;
+}
+
+.header_text {
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.header_btn {
+  display: block;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 22px 70px;
+  background-color: #FF6861;
+  border-radius: 100px;
+  color: #fff;
+  text-decoration: none;
+  width: 79px;
+}
+
+.header_img {
+  padding: 105px;
+  border-radius: 70px;
+  background: linear-gradient(#FFE195, #FF5B5B);
+}
