@@ -1,0 +1,148 @@
+body, h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+
+h1, h2, h3 {
+  line-height: 1.4em;
+}
+
+p {
+  line-height: 1.37em;
+}
+
+.btn {
+  display: block;
+  font-size: 18px;
+  padding: 22px 70px;
+  background-color: #FF6861;
+  border-radius: 100px;
+  color: #fff;
+  text-decoration: none;
+  width: 87px;
+  transition: all 0.5s ease;
+}
+
+.btn:hover {
+  background-color: #f98680;
+}
+
+.wrapper {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  padding: 60px 250px 120px 250px;
+  width: 1100px;
+  margin: 0 auto;
+  background-color: #FDFCEF;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 120px;
+}
+
+.header_logo {
+  width: 182px;
+  margin-bottom: 82px;
+}
+
+.header_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header_content {
+  width: 456px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.header_title {
+  font-size: 50px;
+}
+
+.header_text {
+  font-weight: 500;
+  width: 423px;
+}
+
+.header_img {
+  padding: 105px;
+  border-radius: 70px;
+  background: linear-gradient(#FFE195, #FF5B5B);
+}
+
+.inside {
+  margin-bottom: 120px;
+}
+
+.inside_wrapper {
+  width: 720px;
+  margin: 0 auto;
+}
+
+.inside_title {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.inside_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 41px;
+}
+
+.inside_container {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.inside_content-title {
+  font-size: 30px;
+  margin-bottom: 11px;
+}
+
+.inside_content-text {
+  font-weight: 500;
+}
+
+.animals {
+  background: linear-gradient(0.25turn, #FFF6DF, #FFDFDE);
+  border-radius: 60px;
+  margin-bottom: 120px;
+}
+
+.animals_wrapper {
+  padding: 76px 125px 75px 122px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.anmals_container {
+  width: 475px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.animals_title {
+  font-size: 40px;
+}
+
+.animals_text {
+  width: 371px;
+  font-weight: 500;
+}
+
+.footer_coperait {
+  font-size: 15px;
+  font-weight: 500;
+  text-align: center;
+}
